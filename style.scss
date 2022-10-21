@@ -113,7 +113,6 @@ h2 {
 
     &.main {
         height: 1rem;
-        margin-bottom: 6rem;
     }
 
     &.sub {
@@ -124,6 +123,25 @@ h2 {
 
 nav {
     border-bottom: 0.25rem solid $orange;
+    background: $bg;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 4rem;
+        margin: 0;
+        padding: 32px 0;
+
+        li a{
+            text-decoration: none;
+            color: $white;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
 }
 
 #outerContent {
@@ -144,6 +162,10 @@ nav {
     h2 ~ * {
         margin-left: 2rem;
         width: calc(100% - 4rem);
+    }
+
+    &#about {
+        margin: 12rem 0 6rem 0;
     }
 }
 
