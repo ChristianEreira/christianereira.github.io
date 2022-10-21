@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Ereira - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e916bca64c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section id="intro">
+        <div id="introText">
+            <p>Hi, I'm</p>
+            <p>Christian Ereira</p>
+            <p>I'm a front-end web developer</p>
+        </div>
+        <div class="triangle left" id="leftTri1"></div>
+        <div class="triangle right" id="rightTri1"></div>
+        <div class="triangle left" id="leftTri2"></div>
+        <div class="triangle right" id="rightTri2"></div>
+        <div class="triangle left" id="leftTri3"></div>
+        <div class="triangle right" id="rightTri3"></div>
+    </section>
+    <div class="seperator main"></div>
+
+    <nav>
+        <ul>
+            <li><a href="#about">ABOUT ME</a></li>
+            <li><a href="#skills">MY SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div id="outerContent">
+        <div id="innerContent">
+            <section class="smallSection">
+                <h2>ABOUT ME</h2>
+                <p>Vestibulum eu quam nec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus
+                    blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum
+                    ultricies laoreet, augue eros luctus sapien, ut euismod leo tortor ac enim. In hac habitasse platea
+                    dictumst. Sed cursus venenatis tellus, non lobortis diam volutpat sit amet. Sed tellus augue,
+                    hendrerit eu rutrum in, porttitor at metus. Mauris ac hendrerit metus. Phasellus mattis lectus
+                    commodo felis egestas, id accumsan justo ultrices. Phasellus aliquet, sem a placerat dapibus, enim
+                    purus dictum lacus, nec ultrices ante dui ac ante. Phasellus placerat, urna.</p>
+            </section>
+            <section class="smallSection">
+                <h2>MY SKILLS</h2>
+                <div id="skillsContainer">
+                    <p>Vestibulum eu quam nec neque <span class="skill" data-skill="jsSkill">JavaScript</span> efficitur id eget nisl. Proin porta est convallis lacus blandit <span class="skill" data-skill="cssSkill">CSS</span> sed non enim.
+                        <br><br>
+                        Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet, augue eros luctus sapien, ut euismod leo tortor ac enim. In hac habitasse platea dictumst.
+                        <br><br>
+                        Sed cursus venenatis tellus, non lobortis diam volutpat sit amet. Sed tellus augue, hendrerit eu rutrum in, porttitor at metus.</p>
+                    <div id="skillsCloud">
+                        <div class="skill"><i class="fa-brands fa-html5"></i><p>HTML5</p></div>
+                        <div class="skill" id="cssSkill"><i class="fa-brands fa-css3-alt"></i><p>CSS</p></div>
+                        <div class="skill" id="jsSkill"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
+                        <div class="skill"><i class="fa-brands fa-react"></i><p>React</p></div>
+                        <div class="skill"><i class="fa-brands fa-node-js"></i><p>Node.js</p></div>
+                        <div class="skill"><i class="fa-brands fa-sass"></i><p>SASS</p></div>
+                        <div class="skill"><i class="fa-brands fa-figma"></i><p>Figma</p></div>
+                        <div class="skill"><img src="images/firebase.svg"><p>Firebase</p></div>
+                        <div class="skill"><i class="fa-solid fa-database"></i><p>SQL</p></div>
+                        <div class="skill"><i class="fa-brands fa-php"></i><p>PHP</p></div>
+                    </div>
+                </div>
+            </section>
+            <div class="seperator sub"></div>
+            <section>
+                <h1>PROJECTS</h1>
+                <p>projects here</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
