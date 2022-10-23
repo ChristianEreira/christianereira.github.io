@@ -211,4 +211,36 @@ window.onload = function () {
             }
         }
     });
+
+    let navLinks = document.querySelectorAll("nav a");
+    let navAbout = document.querySelector("nav a[href='#about']");
+    let navSkills = document.querySelector("nav a[href='#skills']");
+    ScrollTrigger.create({
+        trigger: ".seperator.main",
+        start: "bottom top",
+        end: "bottom top",
+        onUpdate: self => {
+            if (self.progress == 0) {
+                navLinks.forEach(child => child.classList.remove("selected"));
+            } else {
+                navLinks.forEach(child => child.classList.remove("selected"));
+                navAbout.classList.add("selected");
+            }
+        }
+    });
+
+    ScrollTrigger.create({
+        trigger: "#about",
+        start: "bottom top",
+        end: "bottom top",
+        onUpdate: self => {
+            if (self.progress == 0) {
+                navLinks.forEach(child => child.classList.remove("selected"));
+                navAbout.classList.add("selected");
+            } else {
+                navLinks.forEach(child => child.classList.remove("selected"));
+                navSkills.classList.add("selected");
+            }
+        }
+    });
 }

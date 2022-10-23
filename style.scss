@@ -140,6 +140,10 @@ nav {
             &:hover {
                 color: $orange;
             }
+
+            &.selected {
+                color: $purple3;
+            }
         }
     }
 
