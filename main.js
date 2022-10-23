@@ -194,4 +194,21 @@ window.onload = function () {
             document.getElementById(element.dataset.skill).classList.remove("selected");
         });
     });
+
+    let navBar = document.querySelector("nav");
+    let paddedElem = document.querySelector("nav + *");
+    ScrollTrigger.create({
+        trigger: "nav",
+        start: "top top",
+        end: "top top",
+        onUpdate: self => {
+            if (self.progress == 0) {
+                navBar.classList.remove("fixed");
+                paddedElem.style.marginTop = '0';
+            } else {
+                navBar.classList.add("fixed");
+                paddedElem.style.marginTop = `${navBar.clientHeight}px`;
+            }
+        }
+    });
 }
