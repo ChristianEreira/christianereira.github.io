@@ -65,6 +65,7 @@ let introtl = gsap.timeline({
     },
 });
 
+// Animate intro section
 introtl.from("#leftTri1, #rightTri1, #leftTri2, #rightTri2, #leftTri3, #rightTri3", {
     width: '101%',
     height: '101%'
@@ -99,6 +100,8 @@ window.onload = function () {
     });
 
     let prevTimestamp = 0;
+
+    // Animate skills cloud
     let cloudtl = gsap.timeline({ repeat: -1, repeatRefresh: true });
     cloudtl.to(rotation, { xForce: "random(0.1, 0.2)", yForce: "random(0.1, 0.2)", zForce: "random(0, 0.1)", duration: 2, ease: "power2.inOut" });
 
@@ -162,30 +165,27 @@ window.onload = function () {
         return rotated3;
     }
 
-    // Get rotation needed to rotate a point to a target point
-    function getRotationToFront(focus, point) {
-        let rot = { x: 0, y: 0, z: 0 };
-
-        let theta = Math.acos(focus.z);
-        let phi = Math.atan2(focus.y, focus.x);
-
-        rot.x = 0;
-        rot.y = -theta;
-        rot.z = -phi;
-
-        return rot;
-    }
-
     window.requestAnimationFrame(drawCloud);
 
+    // Rotate to skill on hover
     document.querySelectorAll("span[data-skill]").forEach(element => {
         element.addEventListener("mouseenter", () => {
             cloudtl.pause();
             document.getElementById(element.dataset.skill).classList.add("selected");
             rotation.x = rotation.x % (Math.PI * 2);
             rotation.y = rotation.y % (Math.PI * 2);
-            let rot = getRotationToFront(cloudObjects.find(object => object.element.id == element.dataset.skill));
-            gsap.to(rotation, { directionalRotation: { x: `${rot.x}_short`, y: `${rot.y}_short`, z: `${rot.z}_short`, useRadians: true }, duration: 0.3 });
+            rotation.z = rotation.z % (Math.PI * 2);
+
+            // Rotate to selected skill
+            let skillObj = cloudObjects.find(object => object.element.id == element.dataset.skill);
+            gsap.to(rotation, {
+                directionalRotation: {
+                    x: `${0}_short`,
+                    y: `${(Math.PI * 2) - Math.acos(skillObj.z)}_short`,
+                    z: `${(Math.PI * 2) - Math.atan2(skillObj.y, skillObj.x)}_short`,
+                    useRadians: true
+                }, duration: 0.3
+            });
         });
 
         element.addEventListener("mouseleave", () => {
@@ -195,6 +195,7 @@ window.onload = function () {
         });
     });
 
+    // Fix nav bar on scroll
     let navBar = document.querySelector("nav");
     let paddedElem = document.querySelector("nav + *");
     ScrollTrigger.create({
@@ -212,6 +213,7 @@ window.onload = function () {
         }
     });
 
+    // Set about link status
     let navLinks = document.querySelectorAll("nav a");
     let navAbout = document.querySelector("nav a[href='#about']");
     let navSkills = document.querySelector("nav a[href='#skills']");
@@ -229,6 +231,7 @@ window.onload = function () {
         }
     });
 
+    // Set skills link status
     ScrollTrigger.create({
         trigger: "#about",
         start: "bottom top",
