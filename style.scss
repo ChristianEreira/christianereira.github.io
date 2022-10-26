@@ -159,6 +159,8 @@ nav {
         display: none;
         font-size: 2rem;
         padding: 1rem 0;
+        width: 100%;
+        justify-content: flex-end;
     }
 }
 
@@ -234,16 +236,25 @@ nav {
 
 @media screen and (max-width: 700px) {
     nav {
-        #menuButton {
-            display: initial;
-        }
-
         ul {
             display: none;
+            border-top: 1px solid #7000e9;
+            margin-top:16px;
+
+            &.open {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        #menuButton {
+            display: flex;
         }
 
         #innerContent {
             display: flex;
+            flex-direction: column;
             justify-content: flex-end;
         }
     }
