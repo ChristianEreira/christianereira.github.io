@@ -213,10 +213,22 @@ window.onload = function () {
         }
     });
 
-    // Set about link status
     let navLinks = document.querySelectorAll("nav a");
     let navAbout = document.querySelector("nav a[href='#about']");
     let navSkills = document.querySelector("nav a[href='#skills']");
+    let navList = document.querySelector("nav ul");
+
+    document.querySelector("#menuButton i").addEventListener("click", () => {
+        navList.classList.toggle("open");
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navList.classList.remove("open");
+        });
+    });
+
+    // Set about link status
     ScrollTrigger.create({
         trigger: ".seperator.main",
         start: "bottom top",
@@ -247,13 +259,17 @@ window.onload = function () {
         }
     });
 
-    gsap.from("#about > *", {x: "-50%", opacity: 0, scrollTrigger: {
-        trigger: "#about h2",
-        start: "top bottom"
-    }});
+    gsap.from("#about > *", {
+        x: "-50%", opacity: 0, scrollTrigger: {
+            trigger: "#about h2",
+            start: "top bottom"
+        }
+    });
 
-    gsap.from("#skills > *", {x: "-50%", opacity: 0, scrollTrigger: {
-        trigger: "#skills h2",
-        start: "top bottom"
-    }});
+    gsap.from("#skills > *", {
+        x: "-50%", opacity: 0, scrollTrigger: {
+            trigger: "#skills h2",
+            start: "top bottom"
+        }
+    });
 }
