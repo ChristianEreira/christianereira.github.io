@@ -163,7 +163,7 @@ nav {
 }
 
 #innerContent {
-    width: clamp(100px, calc(100% - 64px), 1024px);
+    width: clamp(100px, calc(100% - 8rem), 1024px);
 }
 
 .smallSection {
@@ -173,7 +173,6 @@ nav {
 
     h2 ~ * {
         margin-left: 2rem;
-        width: calc(100% - 4rem);
     }
 
     &#about {

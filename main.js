@@ -246,4 +246,14 @@ window.onload = function () {
             }
         }
     });
+
+    gsap.from("#about > *", {x: "-50%", opacity: 0, scrollTrigger: {
+        trigger: "#about h2",
+        start: "top bottom"
+    }});
+
+    gsap.from("#skills > *", {x: "-50%", opacity: 0, scrollTrigger: {
+        trigger: "#skills h2",
+        start: "top bottom"
+    }});
 }
