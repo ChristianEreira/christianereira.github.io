@@ -154,6 +154,12 @@ nav {
         width: 100%;
         z-index: 999;
     }
+
+    #menuButton {
+        display: none;
+        font-size: 2rem;
+        padding: 1rem 0;
+    }
 }
 
 #outerContent {
@@ -222,6 +228,23 @@ nav {
 
         img {
             height: 70px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        #menuButton {
+            display: initial;
+        }
+
+        ul {
+            display: none;
+        }
+
+        #innerContent {
+            display: flex;
+            justify-content: flex-end;
         }
     }
 }
