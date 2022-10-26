@@ -199,9 +199,9 @@ window.onload = function () {
     let navBar = document.querySelector("nav");
     let paddedElem = document.querySelector("nav + *");
     ScrollTrigger.create({
-        trigger: "nav",
-        start: "top top",
-        end: "top top",
+        trigger: ".seperator.main",
+        start: "bottom top",
+        end: "bottom top",
         onUpdate: self => {
             if (self.progress == 0) {
                 navBar.classList.remove("fixed");
