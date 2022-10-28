@@ -23,6 +23,12 @@ p {
     font-size: 20px;
 }
 
+h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    color: $orange;
+}
+
 h2 {
     font-size: 3rem;
     font-weight: 900;
@@ -186,6 +192,33 @@ nav {
 
     &#about {
         padding: 12rem 0 6rem 0;
+    }
+}
+
+#education {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-top: 2rem;
+
+    i {
+        font-size: 2rem;
+        color: $orange;
+        margin-right: 2rem;
+    }
+
+    > div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 2rem;
+        border-left: 0.25rem solid $orange;
+        gap: 1rem 4rem;
+
+        h3 {
+            color: $purple3;
+            margin: 0 0 0.5rem 0;
+        }
     }
 }
 
