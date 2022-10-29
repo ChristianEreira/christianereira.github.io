@@ -27,6 +27,7 @@ h1 {
     font-size: 6rem;
     font-weight: 900;
     color: $orange;
+    text-align: center;
 }
 
 h2 {
@@ -268,6 +269,75 @@ nav {
     }
 }
 
+.project {
+    width: 100%;
+    margin-bottom: 4rem;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin: 2rem 0 1rem -3rem;
+    }
+
+    > div {
+        display: flex;
+
+        > div:first-child {
+            flex: 1;
+
+            img {
+                width: calc(100% - 7rem);
+                border-radius: 1rem;
+                box-shadow: 5rem 1rem $purple;
+                max-width: 600px;
+                margin: 0 7rem 1rem 0;
+            }
+        }
+
+        > div:last-child {
+            width: 25rem;
+
+            p {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .projectBottom {
+        margin-top: 1rem;
+        gap: 2rem;
+    }
+
+    .projectList {
+        display: flex;
+        gap: 1rem;
+
+        .capsule {
+            border: 1px solid $white;
+            padding: 0.5rem 1rem;
+            border-radius: 99rem;
+            font-size: 1rem;
+        }
+
+        .projectButton {
+            text-decoration: none;
+            color: $purple;
+
+            div {
+                background: $white;
+                border-radius: 0.5rem;
+                padding: 0.5rem 2rem;
+                transition: all 200ms;
+
+                &:hover {
+                    background: $purple;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 700px) {
     nav {
         ul {
@@ -290,6 +360,29 @@ nav {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .project {
+        h3 {
+            margin: -1.5rem 0 1rem 3rem;
+        }
+
+        > div {
+            flex-direction: column;
+
+            img {
+                width: calc(100% - 1rem) !important;
+                box-shadow: 1rem 3rem $purple !important;
+                margin: 0 1rem 3rem 0 !important;
+            }
+
+            div:last-child {
+                width: auto;
+                max-width: 600px;
+            }
         }
     }
 }
