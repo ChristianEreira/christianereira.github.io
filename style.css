@@ -1,0 +1,448 @@
+html,
+body {
+  min-width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background: #0c0019;
+  color: #ebebd3;
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  margin: 0;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #ee964b;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ee964b;
+  margin: 0 0 4rem 0;
+}
+
+#intro {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+#intro p:nth-child(2) {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ee964b;
+}
+
+#intro p:nth-child(3) {
+  font-size: 32px;
+  font-weight: 700;
+  color: #b46eff;
+}
+
+#intro .triangle {
+  position: absolute;
+}
+
+#intro .triangle.left {
+  bottom: 0;
+  left: 0;
+}
+
+#intro .triangle.right {
+  top: 0;
+  right: 0;
+}
+
+#intro #leftTri1 {
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(50%, #7000e9), color-stop(50%, transparent));
+  background: linear-gradient(to right top, #7000e9 50%, transparent 50%);
+  width: 40%;
+  height: 40%;
+}
+
+#intro #rightTri1 {
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #7000e9), color-stop(50%, transparent));
+  background: linear-gradient(to left bottom, #7000e9 50%, transparent 50%);
+  width: 40%;
+  height: 40%;
+}
+
+#intro #leftTri2 {
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(50%, #8f28ff), color-stop(50%, transparent));
+  background: linear-gradient(to right top, #8f28ff 50%, transparent 50%);
+  width: 20%;
+  height: 20%;
+  z-index: 2;
+}
+
+#intro #rightTri2 {
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #8f28ff), color-stop(50%, transparent));
+  background: linear-gradient(to left bottom, #8f28ff 50%, transparent 50%);
+  width: 20%;
+  height: 20%;
+  z-index: 2;
+}
+
+#intro #leftTri3 {
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(50%, #b46eff), color-stop(50%, transparent));
+  background: linear-gradient(to right top, #b46eff 50%, transparent 50%);
+  width: 0%;
+  height: 0%;
+  z-index: 3;
+}
+
+#intro #rightTri3 {
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #b46eff), color-stop(50%, transparent));
+  background: linear-gradient(to left bottom, #b46eff 50%, transparent 50%);
+  width: 0%;
+  height: 0%;
+  z-index: 3;
+}
+
+.seperator {
+  width: 100%;
+  background: #7000e9;
+}
+
+.seperator.main {
+  height: 1rem;
+}
+
+.seperator.sub {
+  height: 8px;
+  margin: 6rem 0;
+}
+
+nav {
+  border-bottom: 0.25rem solid #ee964b;
+  background: #0c0019;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+  margin: 0;
+  padding: 32px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ebebd3;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ee964b;
+}
+
+nav ul li a.selected {
+  color: #b46eff;
+}
+
+nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+nav #menuButton {
+  display: none;
+  font-size: 2rem;
+  padding: 1rem 0;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  z-index: 999999;
+}
+
+#outerContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#innerContent {
+  width: clamp(100px, calc(100% - 8rem), 1024px);
+}
+
+.smallSection {
+  width: 100%;
+  padding: 6rem 0;
+  display: inline-block;
+}
+
+.smallSection h2 ~ * {
+  margin-left: 2rem;
+}
+
+.smallSection#about {
+  padding: 12rem 0 6rem 0;
+}
+
+#education {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+#education i {
+  font-size: 2rem;
+  color: #ee964b;
+  margin-right: 2rem;
+}
+
+#education > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem 2rem;
+  border-left: 0.25rem solid #ee964b;
+  gap: 1rem 4rem;
+}
+
+#education > div:last-child h3 {
+  color: #b46eff;
+  margin: 0 0 0.5rem 0;
+}
+
+#skillsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#skillsContainer p {
+  max-width: 500px;
+}
+
+#skillsContainer p span {
+  color: #b46eff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#skillsCloud {
+  width: 300px;
+  height: 300px;
+}
+
+#skillsCloud .skill {
+  position: absolute;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  color: #ebebd3;
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#skillsCloud .skill.selected {
+  color: #b46eff;
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+#skillsCloud .skill i {
+  font-size: 70px;
+}
+
+#skillsCloud .skill img {
+  height: 70px;
+}
+
+.project {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.project h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 2rem 0 1rem -3rem;
+}
+
+.project > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project > div > div:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.project > div > div:first-child img {
+  width: calc(100% - 7rem);
+  border-radius: 1rem;
+  -webkit-box-shadow: 5rem 1rem #7000e9;
+          box-shadow: 5rem 1rem #7000e9;
+  max-width: 600px;
+  margin: 0 7rem 1rem 0;
+}
+
+.project > div > div:last-child {
+  width: 25rem;
+}
+
+.project > div > div:last-child p {
+  margin-bottom: 1rem;
+}
+
+.project .projectBottom {
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.project .projectList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.project .projectList .capsule {
+  border: 1px solid #ebebd3;
+  padding: 0.5rem 1rem;
+  border-radius: 99rem;
+  font-size: 1rem;
+}
+
+.project .projectList .projectButton {
+  text-decoration: none;
+  color: #7000e9;
+}
+
+.project .projectList .projectButton div {
+  background: #ebebd3;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.project .projectList .projectButton div:hover {
+  background: #7000e9;
+  color: #ebebd3;
+}
+
+@media screen and (max-width: 700px) {
+  nav ul {
+    display: none;
+    border-top: 1px solid #7000e9;
+    margin-top: 16px;
+  }
+  nav ul.open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav #menuButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav #innerContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .project h3 {
+    margin: -1.5rem 0 1rem 3rem;
+  }
+  .project > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project > div img {
+    width: calc(100% - 1rem) !important;
+    -webkit-box-shadow: 1rem 3rem #7000e9 !important;
+            box-shadow: 1rem 3rem #7000e9 !important;
+    margin: 0 1rem 3rem 0 !important;
+  }
+  .project > div div:last-child {
+    width: auto;
+    max-width: 600px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
