@@ -24,6 +24,8 @@ p {
 }
 
 h1 {
+    padding: 6rem 0;
+    margin: 0;
     font-size: 6rem;
     font-weight: 900;
     color: $orange;
@@ -124,7 +126,7 @@ h2 {
 
     &.sub {
         height: 8px;
-        margin: 6rem 0;
+        margin: 6rem 0 0 0;
     }
 }
 
@@ -271,7 +273,7 @@ nav {
 
 .project {
     width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 
     h3 {
         font-size: 2rem;
@@ -335,6 +337,10 @@ nav {
                 }
             }
         }
+    }
+
+    &:last-child {
+        margin-bottom: 12rem;
     }
 }
 
