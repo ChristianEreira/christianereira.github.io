@@ -187,17 +187,17 @@ nav #menuButton {
   z-index: 999999;
 }
 
-#outerContent {
+.outerContent {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-#innerContent {
+.innerContent {
   width: clamp(100px, calc(100% - 8rem), 1024px);
 }
 
@@ -391,6 +391,131 @@ nav #menuButton {
 
 .project:last-child {
   margin-bottom: 12rem;
+}
+
+#contact {
+  background: #7000e9;
+}
+
+#contact .innerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+#contact .innerContent > div:first-child {
+  max-width: 25rem;
+}
+
+#contact .innerContent > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+#contact .innerContent > div:last-child i {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+#contact .innerContent > div:last-child a {
+  color: #ebebd3;
+  font-weight: 700;
+}
+
+#contact h2 {
+  color: #ebebd3;
+  margin: 0 0 2rem 0;
+}
+
+#contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+#contact form input,
+#contact form textarea {
+  width: calc(100% - 2rem);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: #8f28ff;
+  color: #ebebd3;
+  resize: vertical;
+  min-height: 1rem;
+}
+
+#contact form input::-webkit-input-placeholder,
+#contact form textarea::-webkit-input-placeholder {
+  color: #ebebd3;
+}
+
+#contact form input:-ms-input-placeholder,
+#contact form textarea:-ms-input-placeholder {
+  color: #ebebd3;
+}
+
+#contact form input::-ms-input-placeholder,
+#contact form textarea::-ms-input-placeholder {
+  color: #ebebd3;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: #ebebd3;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  outline: none;
+  background: #b46eff;
+}
+
+#contact form input[type="submit"],
+#contact form textarea[type="submit"] {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #ebebd3;
+  color: #7000e9;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+#contact form input[type="submit"]:hover,
+#contact form textarea[type="submit"]:hover {
+  background: #7000e9;
+  color: #ebebd3;
 }
 
 @media screen and (max-width: 700px) {
