@@ -262,17 +262,32 @@ window.onload = function () {
     gsap.from("#about > *", {
         x: "-50%", opacity: 0, scrollTrigger: {
             trigger: "#about h2",
-            start: "top bottom"
-        }
+            start: "top center"
+        }, stagger: 0.1
     });
 
     gsap.from("#skills > *", {
-        x: "-50%", opacity: 0, scrollTrigger: {
+        x: "+50%", opacity: 0, scrollTrigger: {
             trigger: "#skills h2",
-            start: "top bottom"
-        }
+            start: "top center"
+        }, stagger: 0.1
     });
 
+    gsap.from("#projects h1, .seperator.sub", {
+        scale: 0.5, opacity: 0, scrollTrigger: {
+            trigger: ".seperator.sub",
+            start: "top center"
+        }, stagger: 0.2
+    });
+
+    document.querySelectorAll(".project").forEach(project => {
+    gsap.from(project.children, {
+        x: "-50%", opacity: 0, scrollTrigger: {
+            trigger: project,
+            start: "top center"
+        }, stagger: 0.1
+    });
+    });
 
     // Submit contact form
     let formContainer = document.getElementById("contactFormContainer");
