@@ -266,6 +266,7 @@ nav #menuButton {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 1rem;
 }
 
 #skillsContainer p {
@@ -280,7 +281,7 @@ nav #menuButton {
 
 #skillsCloud {
   width: 300px;
-  height: 300px;
+  aspect-ratio: 1;
 }
 
 #skillsCloud .skill {
@@ -580,6 +581,13 @@ nav #menuButton {
   }
   .seperator.sub {
     margin: 3rem 0 0 0;
+  }
+  .project h3 {
+    font-size: 1.5rem;
+    margin: -1rem 0 1rem 3rem !important;
+  }
+  .project .capsule {
+    font-size: 0.8rem !important;
   }
   .project:last-child {
     margin-bottom: 6rem;
