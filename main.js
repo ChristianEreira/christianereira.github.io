@@ -216,6 +216,8 @@ window.onload = function () {
     let navLinks = document.querySelectorAll("nav a");
     let navAbout = document.querySelector("nav a[href='#about']");
     let navSkills = document.querySelector("nav a[href='#skills']");
+    let navProjects = document.querySelector("nav a[href='#projects']");
+    let navContact = document.querySelector("nav a[href='#contact']");
     let navList = document.querySelector("nav ul");
 
     document.querySelector("#menuButton i").addEventListener("click", () => {
@@ -231,8 +233,8 @@ window.onload = function () {
     // Set about link status
     ScrollTrigger.create({
         trigger: ".seperator.main",
-        start: "bottom top",
-        end: "bottom top",
+        start: "bottom 50%",
+        end: "bottom 50%",
         onUpdate: self => {
             if (self.progress == 0) {
                 navLinks.forEach(child => child.classList.remove("selected"));
@@ -246,8 +248,8 @@ window.onload = function () {
     // Set skills link status
     ScrollTrigger.create({
         trigger: "#about",
-        start: "bottom top",
-        end: "bottom top",
+        start: "bottom 50%",
+        end: "bottom 50%",
         onUpdate: self => {
             if (self.progress == 0) {
                 navLinks.forEach(child => child.classList.remove("selected"));
@@ -255,6 +257,38 @@ window.onload = function () {
             } else {
                 navLinks.forEach(child => child.classList.remove("selected"));
                 navSkills.classList.add("selected");
+            }
+        }
+    });
+
+    // Set projects link status
+    ScrollTrigger.create({
+        trigger: "#skills",
+        start: "bottom 50%",
+        end: "bottom 50%",
+        onUpdate: self => {
+            if (self.progress == 0) {
+                navLinks.forEach(child => child.classList.remove("selected"));
+                navSkills.classList.add("selected");
+            } else {
+                navLinks.forEach(child => child.classList.remove("selected"));
+                navProjects.classList.add("selected");
+            }
+        }
+    });
+
+    // Set contact link status
+    ScrollTrigger.create({
+        trigger: "#projects",
+        start: "bottom 50%",
+        end: "bottom 50%",
+        onUpdate: self => {
+            if (self.progress == 0) {
+                navLinks.forEach(child => child.classList.remove("selected"));
+                navProjects.classList.add("selected");
+            } else {
+                navLinks.forEach(child => child.classList.remove("selected"));
+                navContact.classList.add("selected");
             }
         }
     });

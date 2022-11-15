@@ -255,7 +255,7 @@ nav #menuButton {
 #education > div:last-child h3 {
   color: #b46eff;
   margin: 0 0 0.5rem 0;
-  font-size: 1rem;
+  font-size: 20px;
 }
 
 #skillsContainer {
@@ -579,6 +579,9 @@ nav #menuButton {
   h2 {
     margin: 0 0 2rem 0;
     font-size: 2rem;
+  }
+  #education h3 {
+    font-size: 1rem !important;
   }
   .seperator.sub {
     margin: 3rem 0 0 0;

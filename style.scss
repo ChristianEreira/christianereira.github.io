@@ -226,7 +226,7 @@ nav {
         h3 {
             color: $purple3;
             margin: 0 0 0.5rem 0;
-            font-size: 1rem;
+            font-size: 20px;
         }
     }
 }
@@ -486,6 +486,10 @@ nav {
     h2 {
         margin: 0 0 2rem 0;
         font-size: 2rem;
+    }
+
+    #education h3 {
+        font-size: 1rem !important;
     }
 
     .seperator.sub {
