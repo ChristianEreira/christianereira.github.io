@@ -58,13 +58,13 @@ h2 {
 }
 
 #intro p:nth-child(2) {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   color: #ee964b;
 }
 
 #intro p:nth-child(3) {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   color: #b46eff;
 }
@@ -139,7 +139,7 @@ h2 {
 }
 
 .seperator.sub {
-  height: 8px;
+  height: 0.5rem;
   margin: 6rem 0 0 0;
 }
 
@@ -155,7 +155,7 @@ nav ul {
   display: flex;
   gap: 4rem;
   margin: 0;
-  padding: 32px 0;
+  padding: 2rem 0;
 }
 
 nav ul li a {
@@ -203,7 +203,7 @@ nav #menuButton {
 }
 
 .innerContent {
-  width: clamp(100px, calc(100% - 8rem), 1024px);
+  width: clamp(6rem, calc(100% - 8rem), 64rem);
 }
 
 .smallSection {
@@ -271,7 +271,7 @@ nav #menuButton {
 }
 
 #skillsContainer p {
-  max-width: 500px;
+  max-width: 32rem;
 }
 
 #skillsContainer p span {
@@ -281,7 +281,7 @@ nav #menuButton {
 }
 
 #skillsCloud {
-  width: 300px;
+  width: 18rem;
   aspect-ratio: 1;
 }
 
@@ -299,7 +299,7 @@ nav #menuButton {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -316,7 +316,7 @@ nav #menuButton {
 }
 
 #skillsCloud .skill img {
-  height: 70px;
+  height: 4rem;
 }
 
 .project {
@@ -347,7 +347,7 @@ nav #menuButton {
   border-radius: 1rem;
   -webkit-box-shadow: 5rem 1rem #7000e9;
           box-shadow: 5rem 1rem #7000e9;
-  max-width: 600px;
+  max-width: 35rem;
   margin: 0 7rem 1rem 0;
 }
 
@@ -555,7 +555,7 @@ nav #menuButton {
 
 @media screen and (max-width: 500px) {
   .innerContent {
-    width: clamp(100px, calc(100% - 4rem), 1024px);
+    width: clamp(6rem, calc(100% - 4rem), 64rem);
   }
   .innerContent .contactCenter:nth-child(2) {
     margin-left: 0 !important;
@@ -602,7 +602,7 @@ nav #menuButton {
   nav ul {
     display: none;
     border-top: 1px solid #7000e9;
-    margin-top: 16px;
+    margin-top: 1rem;
   }
   nav ul.open {
     display: -webkit-box;
@@ -653,7 +653,7 @@ nav #menuButton {
   }
   .project > div div:last-child {
     width: auto;
-    max-width: 600px;
+    max-width: 35rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
