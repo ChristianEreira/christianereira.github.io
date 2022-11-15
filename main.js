@@ -272,4 +272,52 @@ window.onload = function () {
             start: "top bottom"
         }
     });
+
+
+    // Submit contact form
+    let formContainer = document.getElementById("contactFormContainer");
+    let statusContainer = document.getElementById("contactStatusContainer");
+    let formStatus = document.getElementById("formStatus");
+    let formStatusIcon = document.getElementById("formStatusIcon");
+    let form = document.getElementById("contactForm");
+    form.addEventListener("submit", event => {
+        event.preventDefault();
+
+        console.log("test");
+        formContainer.classList.add("hidden");
+        statusContainer.classList.remove("hidden");
+
+        let data = new FormData(event.target);
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+
+                formStatus.textContent = "Thanks for your message! I'll get back to you by email as soon as possible.";
+                formStatusIcon.removeAttribute("class");
+                formStatusIcon.classList.add("fa-solid", "fa-circle-check");
+                form.reset()
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        formStatusIcon.removeAttribute("class");
+                        formStatusIcon.classList.add("fa-solid", "fa-circle-exclamation");
+                        formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
+                    } else {
+                        formStatusIcon.removeAttribute("class");
+                        formStatusIcon.classList.add("fa-solid", "fa-circle-exclamation");
+                        formStatus.textContent = "Oops! There was a problem sending your message";
+                    }
+                })
+            }
+        }).catch(error => {
+            formStatusIcon.removeAttribute("class");
+            formStatusIcon.classList.add("fa-solid", "fa-circle-exclamation");
+            formStatus.textContent = "Oops! There was a problem sending your message";
+        });
+    });
 }

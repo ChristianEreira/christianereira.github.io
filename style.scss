@@ -356,9 +356,10 @@ nav {
 
         > div:first-child {
             max-width: 25rem;
+            width: 100%;
         }
 
-        > div:last-child {
+        .contactCenter {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -373,6 +374,14 @@ nav {
                 color: $white;
                 font-weight: 700;
             }
+        }
+
+        #contactStatusContainer {
+            width: calc(100% - 2rem);
+        }
+
+        .hidden {
+            display: none;
         }
     }
 

@@ -414,9 +414,10 @@ nav #menuButton {
 
 #contact .innerContent > div:first-child {
   max-width: 25rem;
+  width: 100%;
 }
 
-#contact .innerContent > div:last-child {
+#contact .innerContent .contactCenter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,14 +431,22 @@ nav #menuButton {
   gap: 0.5rem;
 }
 
-#contact .innerContent > div:last-child i {
+#contact .innerContent .contactCenter i {
   font-size: 4rem;
   margin-bottom: 0.5rem;
 }
 
-#contact .innerContent > div:last-child a {
+#contact .innerContent .contactCenter a {
   color: #ebebd3;
   font-weight: 700;
+}
+
+#contact .innerContent #contactStatusContainer {
+  width: calc(100% - 2rem);
+}
+
+#contact .innerContent .hidden {
+  display: none;
 }
 
 #contact h2 {
