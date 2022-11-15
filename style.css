@@ -52,6 +52,10 @@ h2 {
   text-align: center;
 }
 
+#intro p {
+  padding: 0 1rem;
+}
+
 #intro p:nth-child(2) {
   font-size: 32px;
   font-weight: 700;
@@ -250,6 +254,7 @@ nav #menuButton {
 #education > div:last-child h3 {
   color: #b46eff;
   margin: 0 0 0.5rem 0;
+  font-size: 1rem;
 }
 
 #skillsContainer {
@@ -409,7 +414,7 @@ nav #menuButton {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 #contact .innerContent > div:first-child {
@@ -544,6 +549,41 @@ nav #menuButton {
 #contact form textarea[type="submit"]:hover {
   background: #7000e9;
   color: #ebebd3;
+}
+
+@media screen and (max-width: 500px) {
+  .innerContent {
+    width: clamp(100px, calc(100% - 4rem), 1024px);
+  }
+  .innerContent .contactCenter:nth-child(2) {
+    margin-left: 0 !important;
+  }
+  .smallSection {
+    padding: 3rem 0;
+  }
+  .smallSection#about {
+    padding: 6rem 0 3rem 0;
+  }
+  .smallSection h2 ~ * {
+    margin-left: 0;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 14vw;
+    padding: 3rem 0;
+  }
+  h2 {
+    margin: 0 0 2rem 0;
+    font-size: 2rem;
+  }
+  .seperator.sub {
+    margin: 3rem 0 0 0;
+  }
+  .project:last-child {
+    margin-bottom: 6rem;
+  }
 }
 
 @media screen and (max-width: 700px) {

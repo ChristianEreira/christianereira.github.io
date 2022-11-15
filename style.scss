@@ -49,6 +49,10 @@ h2 {
     gap: 0.5rem;
     text-align: center;
 
+    p {
+        padding: 0 1rem;
+    }
+
     p:nth-child(2) {
         font-size: 32px;
         font-weight: 700;
@@ -221,6 +225,7 @@ nav {
         h3 {
             color: $purple3;
             margin: 0 0 0.5rem 0;
+            font-size: 1rem;
         }
     }
 }
@@ -352,7 +357,7 @@ nav {
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 4rem;
 
         > div:first-child {
             flex-grow: 1;
@@ -443,6 +448,50 @@ nav {
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .innerContent {
+        width: clamp(100px, calc(100% - 4rem), 1024px);
+
+        .contactCenter:nth-child(2) {
+            margin-left: 0 !important;
+        }
+    }
+
+    .smallSection {
+        padding: 3rem 0;
+
+        &#about {
+            padding: 6rem 0 3rem 0;
+        }
+
+        h2 ~ * {
+            margin-left: 0;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 14vw;
+        padding: 3rem 0;
+    }
+
+    h2 {
+        margin: 0 0 2rem 0;
+        font-size: 2rem;
+    }
+
+    .seperator.sub {
+        margin: 3rem 0 0 0;
+    }
+
+    .project:last-child {
+        margin-bottom: 6rem;
     }
 }
 
