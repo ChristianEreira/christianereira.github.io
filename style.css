@@ -413,6 +413,18 @@ nav #menuButton {
 }
 
 #contact .innerContent > div:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact .innerContent > div:first-child > div {
   max-width: 25rem;
   width: 100%;
 }
@@ -429,6 +441,9 @@ nav #menuButton {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 #contact .innerContent .contactCenter i {
@@ -439,6 +454,10 @@ nav #menuButton {
 #contact .innerContent .contactCenter a {
   color: #ebebd3;
   font-weight: 700;
+}
+
+#contact .innerContent .contactCenter:nth-child(2) {
+  margin-left: 2rem;
 }
 
 #contact .innerContent #contactStatusContainer {
