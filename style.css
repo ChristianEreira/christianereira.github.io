@@ -53,17 +53,31 @@ h2 {
   text-align: center;
 }
 
-#intro p {
+#intro #scrollText {
+  z-index: 10;
+  position: absolute;
+  color: #0c0019;
+  font-weight: 700;
+}
+
+#intro #scrollText i {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  --fa-animation-duration: 1.4s;
+  --fa-bounce-rebound: 0;
+}
+
+#intro #introText p {
   padding: 0 1rem;
 }
 
-#intro p:nth-child(2) {
+#intro #introText p:nth-child(2) {
   font-size: 2rem;
   font-weight: 700;
   color: #ee964b;
 }
 
-#intro p:nth-child(3) {
+#intro #introText p:nth-child(3) {
   font-size: 2rem;
   font-weight: 700;
   color: #b46eff;
@@ -551,6 +565,16 @@ nav #menuButton {
 #contact form textarea[type="submit"]:hover {
   background: #7000e9;
   color: #ebebd3;
+}
+
+footer p {
+  font-size: 1rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer p a {
+  color: #b46eff;
 }
 
 @media screen and (max-width: 500px) {

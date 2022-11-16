@@ -50,20 +50,36 @@ h2 {
     gap: 0.5rem;
     text-align: center;
 
-    p {
-        padding: 0 1rem;
+    #scrollText {
+        z-index: 10;
+        position: absolute;
+        color: $bg;
+        font-weight: 700;
+
+        i {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            --fa-animation-duration: 1.4s;
+            --fa-bounce-rebound: 0;
+        }
     }
 
-    p:nth-child(2) {
-        font-size: 2rem;
-        font-weight: 700;
-        color: $orange;
-    }
+    #introText {
+        p {
+            padding: 0 1rem;
+        }
 
-    p:nth-child(3) {
-        font-size: 2rem;
-        font-weight: 700;
-        color: $purple3;
+        p:nth-child(2) {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $orange;
+        }
+
+        p:nth-child(3) {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $purple3;
+        }
     }
 
     .triangle {
@@ -449,6 +465,18 @@ nav {
                     color: $white;
                 }
             }
+        }
+    }
+}
+
+footer {
+    p {
+        font-size: 1rem;
+        padding: 2rem 1rem;
+        text-align: center;
+
+        a {
+            color: $purple3;
         }
     }
 }

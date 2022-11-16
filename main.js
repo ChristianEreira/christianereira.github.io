@@ -66,12 +66,17 @@ let introtl = gsap.timeline({
 });
 
 // Animate intro section
-introtl.from("#leftTri1, #rightTri1, #leftTri2, #rightTri2, #leftTri3, #rightTri3", {
+introtl.to("#scrollText", {
+    opacity: "0",
+    y: "-100%",
+}).from("#leftTri1, #rightTri1, #leftTri2, #rightTri2, #leftTri3, #rightTri3", {
     width: '101%',
-    height: '101%'
-}).from("#introText", {
-    scale: '0.7'
-}, 0);
+    height: '101%',
+    duration: 5,
+}, 0.5).from("#introText", {
+    scale: '0.7',
+    duration: 5,
+}, 0.5);
 
 window.onload = function () {
     const phi = Math.PI * (3 - Math.sqrt(5));
