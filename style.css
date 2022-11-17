@@ -9,6 +9,7 @@ body {
   background: #0c0019;
   color: #ebebd3;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 p {
