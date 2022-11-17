@@ -208,15 +208,19 @@ nav {
 
 .smallSection {
     width: 100%;
-    padding: 6rem 0;
+    padding: 12rem 0 0 0;
     display: inline-block;
 
     h2 ~ * {
         margin-left: 2rem;
     }
 
-    &#about {
+    &#projects {
         padding: 12rem 0 6rem 0;
+    }
+
+    &#contact {
+        padding: 6rem 0;
     }
 }
 
@@ -492,10 +496,14 @@ footer {
     }
 
     .smallSection {
-        padding: 3rem 0;
+        padding: 6rem 0 0 0;
 
-        &#about {
+        &#projects {
             padding: 6rem 0 3rem 0;
+        }
+
+        &#contact {
+            padding: 3rem 0;
         }
 
         h2 ~ * {

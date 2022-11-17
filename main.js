@@ -221,7 +221,7 @@ window.onload = function () {
     let navLinks = document.querySelectorAll("nav a");
     let navAbout = document.querySelector("nav a[href='#about']");
     let navSkills = document.querySelector("nav a[href='#skills']");
-    let navProjects = document.querySelector("nav a[href='#projects']");
+    let navProjects = document.querySelector("nav a[href='#projectsSection']");
     let navContact = document.querySelector("nav a[href='#contact']");
     let navList = document.querySelector("nav ul");
 
