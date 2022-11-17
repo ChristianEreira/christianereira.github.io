@@ -309,8 +309,10 @@ nav #menuButton {
   -webkit-transform-origin: center;
           transform-origin: center;
   color: #ebebd3;
-  -webkit-transition: color 0.4s ease-in-out;
-  transition: color 0.4s ease-in-out;
+  -webkit-transition: color, -webkit-filter 0.4s ease-in-out;
+  transition: color, -webkit-filter 0.4s ease-in-out;
+  transition: color, filter 0.4s ease-in-out;
+  transition: color, filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,6 +328,8 @@ nav #menuButton {
 
 #skillsCloud .skill.selected {
   color: #b46eff;
+  -webkit-filter: none !important;
+          filter: none !important;
   -webkit-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out;
 }
@@ -336,6 +340,11 @@ nav #menuButton {
 
 #skillsCloud .skill img {
   height: 4rem;
+}
+
+#skillsCloud.dimmed .skill {
+  -webkit-filter: opacity(0.3);
+          filter: opacity(0.3);
 }
 
 .project {

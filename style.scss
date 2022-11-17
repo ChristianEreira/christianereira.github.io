@@ -278,7 +278,7 @@ nav {
         position: absolute;
         transform-origin: center;
         color: $white;
-        transition: color 0.4s ease-in-out;
+        transition: color, filter 0.4s ease-in-out;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -286,6 +286,7 @@ nav {
 
         &.selected {
             color: $purple3;
+            filter: none !important;
             transition: color 0.4s ease-in-out;
         }
 
@@ -295,6 +296,12 @@ nav {
 
         img {
             height: 4rem;
+        }
+    }
+
+    &.dimmed {
+        .skill {
+            filter: opacity(0.3);
         }
     }
 }

@@ -176,6 +176,7 @@ window.onload = function () {
     document.querySelectorAll("span[data-skill]").forEach(element => {
         element.addEventListener("mouseenter", () => {
             cloudtl.pause();
+            cloud.classList.add("dimmed");
             document.getElementById(element.dataset.skill).classList.add("selected");
             rotation.x = rotation.x % (Math.PI * 2);
             rotation.y = rotation.y % (Math.PI * 2);
@@ -196,6 +197,7 @@ window.onload = function () {
         element.addEventListener("mouseleave", () => {
             cloudtl.invalidate();
             cloudtl.play();
+            cloud.classList.remove("dimmed");
             document.getElementById(element.dataset.skill).classList.remove("selected");
         });
     });
