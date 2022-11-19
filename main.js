@@ -55,6 +55,7 @@ gsap.registerPlugin({
     }
 });
 
+// Animate intro section
 let introtl = gsap.timeline({
     scrollTrigger: {
         trigger: "#intro",
@@ -64,8 +65,6 @@ let introtl = gsap.timeline({
         scrub: true
     },
 });
-
-// Animate intro section
 introtl.to("#scrollText", {
     opacity: "0",
     y: "-100%",
@@ -78,14 +77,17 @@ introtl.to("#scrollText", {
     duration: 5,
 }, 0.5);
 
+
 window.onload = function () {
+    // Initialise skill cloud variables
     const phi = Math.PI * (3 - Math.sqrt(5));
     let rotation = { x: 0, y: 0, z: 0, xForce: 0, yForce: 0, zForce: 0 };
     let cloud = document.getElementById("skillsCloud");
-    let cloudObjects = Array.prototype.map.call(cloud.children, child => { return { element: child } });
     let maxWidth = 0;
     let maxHeight = 0;
 
+    // Initialise array of skills and their positions
+    let cloudObjects = Array.prototype.map.call(cloud.children, child => { return { element: child } });
     cloudObjects.forEach((object, index) => {
         if (object.element.clientWidth > maxWidth) {
             maxWidth = object.element.clientWidth;
@@ -106,10 +108,11 @@ window.onload = function () {
 
     let prevTimestamp = 0;
 
-    // Animate skills cloud
+    // Skills cloud ambient rotation
     let cloudtl = gsap.timeline({ repeat: -1, repeatRefresh: true });
     cloudtl.to(rotation, { xForce: "random(0.1, 0.2)", yForce: "random(0.1, 0.2)", zForce: "random(0, 0.1)", duration: 2, ease: "power2.inOut" });
 
+    /** Skills cloud draw loop */
     function drawCloud(timestamp) {
         if (prevTimestamp == 0) {
             prevTimestamp = timestamp;
@@ -144,7 +147,14 @@ window.onload = function () {
         window.requestAnimationFrame(drawCloud);
     }
 
-    // Rotate a point around the x and y axis
+    /**
+     * Rotate a point around the x, y and z axis
+     * @param {{x: number, y: number, z: number}} point - Point to rotate
+     * @param {number} angleX - Angle to rotate around the x axis
+     * @param {number} angleY - Angle to rotate around the y axis
+     * @param {number} angleZ - Angle to rotate around the z axis
+     * @returns {{x: number, y: number, z: number}} - Rotated point
+     */
     function rotate(point, angleX, angleY, angleZ) {
         // Rotate around x axis
         let rotated1 = {
@@ -221,11 +231,11 @@ window.onload = function () {
     });
 
     let navLinks = document.querySelectorAll("nav a");
+    let navList = document.querySelector("nav ul");
     let navAbout = document.querySelector("nav a[href='#about']");
     let navSkills = document.querySelector("nav a[href='#skills']");
     let navProjects = document.querySelector("nav a[href='#projectsSection']");
     let navContact = document.querySelector("nav a[href='#contact']");
-    let navList = document.querySelector("nav ul");
 
     document.querySelector("#menuButton i").addEventListener("click", () => {
         navList.classList.toggle("open");
@@ -300,6 +310,7 @@ window.onload = function () {
         }
     });
 
+    // About section animations
     gsap.from("#about > *", {
         x: "-50%", opacity: 0, scrollTrigger: {
             trigger: "#about h2",
@@ -307,6 +318,7 @@ window.onload = function () {
         }, stagger: 0.1
     });
 
+    // Skills section animations
     gsap.from("#skills > *", {
         x: "+50%", opacity: 0, scrollTrigger: {
             trigger: "#skills h2",
@@ -314,6 +326,7 @@ window.onload = function () {
         }, stagger: 0.1
     });
 
+    // Projects section animations
     gsap.from("#projects h1, .seperator.sub", {
         scale: 0.5, opacity: 0, scrollTrigger: {
             trigger: ".seperator.sub",
@@ -339,7 +352,6 @@ window.onload = function () {
     form.addEventListener("submit", event => {
         event.preventDefault();
 
-        console.log("test");
         formContainer.classList.add("hidden");
         statusContainer.classList.remove("hidden");
 
