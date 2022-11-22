@@ -53,13 +53,14 @@
         <div class="innerContent">
             <section class="smallSection" id="about">
                 <h2>ABOUT ME</h2>
-                <p>Vestibulum eu quam nec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus
-                    blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum
-                    ultricies laoreet, augue eros luctus sapien, ut euismod leo tortor ac enim. In hac habitasse platea
-                    dictumst. Sed cursus venenatis tellus, non lobortis diam volutpat sit amet. Sed tellus augue,
-                    hendrerit eu rutrum in, porttitor at metus. Mauris ac hendrerit metus. Phasellus mattis lectus
-                    commodo felis egestas, id accumsan justo ultrices. Phasellus aliquet, sem a placerat dapibus, enim
-                    purus dictum lacus, nec ultrices ante dui ac ante. Phasellus placerat, urna.</p>
+                <p>Hi, I'm a front-end web developer creating engaging responsive interfaces and web apps. I love being
+                    creative, solving problems, and realising ideas, and web development gives me the perfect platform
+                    to do just that. I aim to write code that is effective, efficient, and easily maintainable. I'm
+                    passionate about learning and look forward to new challenges.
+                    <br>
+                    <br>My interests lie in all things tech; In my free time, I enjoy tinkering with
+                    electronics, writing software, and playing video games.
+                </p>
                 <div id="education">
                     <i class="fa-solid fa-user-graduate"></i>
                     <div>
@@ -77,46 +78,85 @@
             <section class="smallSection" id="skills">
                 <h2>MY SKILLS</h2>
                 <div id="skillsContainer">
-                    <p>Vestibulum eu quam nec neque <span class="skill" data-skill="jsSkill">JavaScript</span> efficitur
-                        id eget nisl. Proin porta est convallis lacus blandit <span class="skill"
-                            data-skill="cssSkill">CSS</span> sed non enim.
-                        <br><br>
-                        Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet, augue eros
-                        luctus sapien, ut euismod leo tortor ac enim. In hac habitasse platea dictumst.
-                        <br><br>
-                        Sed cursus venenatis tellus, non lobortis diam volutpat sit amet. Sed tellus augue, hendrerit eu
-                        rutrum in, porttitor at metus.
+                    <p>I create interfaces with front-end technologies such as
+                        <span class="skill" data-skill="htmlSkill">HTML5</span>,
+                        <span class="skill" data-skill="cssSkill">CSS</span>/<span class="skill"
+                            data-skill="sassSkill">SASS</span>,
+                        <span class="skill" data-skill="jsSkill">JavaScript</span>, and
+                        <span class="skill" data-skill="reactSkill">React</span>.
+                        <br>
+                        <br>I implement functionality with back-end technologies such as
+                        <span class="skill" data-skill="firebaseSkill">Firebase</span>,
+                        <span class="skill" data-skill="nodeSkill">Node.js</span>,
+                        <span class="skill" data-skill="phpSkill">PHP</span> and
+                        <span class="skill" data-skill="sqlSkill">SQL</span>.
+                        <br>
+                        <br>I use tools such as
+                        <span class="skill" data-skill="figmaSkill">Figma</span>,
+                        <span class="skill" data-skill="gitSkill">Git</span>, and
+                        <span class="skill" data-skill="vscodeSkill">VS Code</span>.
                     </p>
                     <div id="skillsCloud">
-                        <div class="skill"><i class="fa-brands fa-html5"></i>
+                        <div class="skill" id="htmlSkill">
+                            <i class="fa-brands fa-html5"></i>
                             <p>HTML5</p>
                         </div>
-                        <div class="skill" id="cssSkill"><i class="fa-brands fa-css3-alt"></i>
+                        <div class="skill" id="cssSkill">
+                            <i class="fa-brands fa-css3-alt"></i>
                             <p>CSS</p>
                         </div>
-                        <div class="skill" id="jsSkill"><i class="fa-brands fa-js"></i>
+                        <div class="skill" id="jsSkill">
+                            <i class="fa-brands fa-js"></i>
                             <p>JavaScript</p>
                         </div>
-                        <div class="skill"><i class="fa-brands fa-react"></i>
+                        <div class="skill" id="reactSkill">
+                            <i class="fa-brands fa-react"></i>
                             <p>React</p>
                         </div>
-                        <div class="skill"><i class="fa-brands fa-node-js"></i>
+                        <div class="skill" id="nodeSkill">
+                            <i class="fa-brands fa-node-js"></i>
                             <p>Node.js</p>
                         </div>
-                        <div class="skill"><i class="fa-brands fa-sass"></i>
+                        <div class="skill" id="sassSkill">
+                            <i class="fa-brands fa-sass"></i>
                             <p>SASS</p>
                         </div>
-                        <div class="skill"><i class="fa-brands fa-figma"></i>
+                        <div class="skill" id="figmaSkill">
+                            <i class="fa-brands fa-figma"></i>
                             <p>Figma</p>
                         </div>
-                        <div class="skill"><img src="images/firebase.svg">
-                            <p>Firebase</p>
-                        </div>
-                        <div class="skill"><i class="fa-solid fa-database"></i>
+                        <div class="skill" id="sqlSkill">
+                            <i class="fa-solid fa-database"></i>
                             <p>SQL</p>
                         </div>
-                        <div class="skill"><i class="fa-brands fa-php"></i>
+                        <div class="skill" id="phpSkill">
+                            <i class="fa-brands fa-php"></i>
                             <p>PHP</p>
+                        </div>
+                        <div class="skill" id="gitSkill">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <p>Git</p>
+                        </div>
+                        <div class="skill" id="firebaseSkill">
+                            <svg fill="currentColor" height="4rem" version="1.1" viewBox="0 0 48.619 67.182"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m1.6067 43.873 6.6205-42.581c0.10057-0.64886 0.6027-1.1604 1.2469-1.2704 0.64422-0.10992 1.2862 0.20642 1.5942 0.78556l7.1181 13.36zm47.012 10.333-6.3014-39.188c-0.09519-0.56282-0.49485-1.0253-1.036-1.1988-0.54119-0.17353-1.1335-0.02915-1.5354 0.37426l-39.746 40.012 21.992 12.395c1.381 0.77491 3.063 0.77491 4.4441 0zm-17.871-34.199-5.0936-9.7454c-0.26268-0.5018-0.78042-0.81599-1.3446-0.81599s-1.0819 0.31419-1.3446 0.81599l-22.365 40.081z" />
+                            </svg>
+                            <p>Firebase</p>
+                        </div>
+                        <div class="skill" id="vscodeSkill">
+                            <svg fill="currentColor" height="4rem" version="1.1" viewBox="0 0 100 100"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m96.461 10.796-20.604-9.9207c-2.385-1.1483-5.2352-0.66393-7.1069 1.2078l-67.451 61.5c-1.8143 1.6541-1.8122 4.5105 0.0045 6.162l5.5096 5.0088c1.4852 1.3502 3.722 1.4496 5.3211 0.2365l81.227-61.621c2.7251-2.0673 6.6391-0.1237 6.6391 3.2968v-0.2392c0-2.401-1.3754-4.5897-3.5386-5.6313z" />
+                                <path
+                                    d="m96.461 89.204-20.604 9.9207c-2.385 1.1485-5.2352 0.6639-7.1069-1.2078l-67.451-61.5c-1.8143-1.6542-1.8122-4.5106 0.0045-6.1621l5.5096-5.0088c1.4852-1.3502 3.722-1.4496 5.3211-0.2365l81.227 61.621c2.7251 2.0673 6.6391 0.1237 6.6391-3.2967v0.2392c0 2.4009-1.3754 4.5896-3.5386 5.6312z" />
+                                <path
+                                    d="m75.858 99.126c-2.3857 1.1477-5.2359 0.6622-7.1078-1.2097 2.3064 2.3064 6.25 0.6729 6.25-2.5888v-90.656c0-3.2617-3.9436-4.8952-6.25-2.5888 1.8719-1.8719 4.7221-2.357 7.1078-1.2097l20.601 9.9071c2.1647 1.041 3.5413 3.2305 3.5413 5.6325v67.174c0 2.402-1.3766 4.5915-3.5414 5.6325l-20.601 9.9067z" />
+                            </svg>
+
+                            <p>VS Code</p>
                         </div>
                     </div>
                 </div>
