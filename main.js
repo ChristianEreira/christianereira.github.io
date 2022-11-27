@@ -105,6 +105,8 @@ window.onload = function () {
         object.x = Math.cos(theta) * radius;
         object.z = Math.sin(theta) * radius;
     });
+    maxWidth = maxWidth / 1.5;
+    maxHeight = maxHeight / 1.5;
 
     let prevTimestamp = 0;
 
