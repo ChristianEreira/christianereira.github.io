@@ -20,7 +20,7 @@ p {
 h1 {
   padding: 6rem 0;
   margin: 0;
-  font-size: 6rem;
+  font-size: clamp(1rem, 14vw, 6rem);
   font-weight: 900;
   color: #ee964b;
   text-align: center;
@@ -356,6 +356,8 @@ nav #menuButton {
   font-size: 2rem;
   font-weight: 900;
   margin: 2rem 0 1rem -3rem;
+  z-index: 999;
+  position: relative;
 }
 
 .project > div {
@@ -370,7 +372,20 @@ nav #menuButton {
           flex: 1;
 }
 
-.project > div > div:first-child img {
+.project > div > div:first-child .splide {
+  border-radius: 1rem;
+  overflow: hidden;
+  -webkit-box-shadow: 5rem 1rem #7000e9;
+          box-shadow: 5rem 1rem #7000e9;
+  max-width: 35rem;
+  margin: 0 7rem 1rem 0;
+}
+
+.project > div > div:first-child .splide img {
+  width: 100%;
+}
+
+.project > div > div:first-child > img {
   width: calc(100% - 7rem);
   border-radius: 1rem;
   -webkit-box-shadow: 5rem 1rem #7000e9;
@@ -686,7 +701,15 @@ footer p a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .project > div img {
+  .project > div > div:first-child .splide {
+    -webkit-box-shadow: 1rem 3rem #7000e9 !important;
+            box-shadow: 1rem 3rem #7000e9 !important;
+    margin: 0 1rem 3rem 0 !important;
+  }
+  .project > div > div:first-child .splide img {
+    width: 100%;
+  }
+  .project > div > div:first-child > img {
     width: calc(100% - 1rem) !important;
     -webkit-box-shadow: 1rem 3rem #7000e9 !important;
             box-shadow: 1rem 3rem #7000e9 !important;

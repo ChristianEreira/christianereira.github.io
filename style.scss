@@ -27,7 +27,7 @@ p {
 h1 {
     padding: 6rem 0;
     margin: 0;
-    font-size: 6rem;
+    font-size: clamp(1rem, 14vw, 6rem);
     font-weight: 900;
     color: $orange;
     text-align: center;
@@ -314,6 +314,8 @@ nav {
         font-size: 2rem;
         font-weight: 900;
         margin: 2rem 0 1rem -3rem;
+        z-index: 999;
+        position: relative;
     }
 
     > div {
@@ -322,7 +324,19 @@ nav {
         > div:first-child {
             flex: 1;
 
-            img {
+            .splide {
+                border-radius: 1rem;
+                overflow: hidden;
+                box-shadow: 5rem 1rem $purple;
+                max-width: 35rem;
+                margin: 0 7rem 1rem 0;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            > img {
                 width: calc(100% - 7rem);
                 border-radius: 1rem;
                 box-shadow: 5rem 1rem $purple;
@@ -591,10 +605,22 @@ footer {
         > div {
             flex-direction: column;
 
-            img {
-                width: calc(100% - 1rem) !important;
-                box-shadow: 1rem 3rem $purple !important;
-                margin: 0 1rem 3rem 0 !important;
+            > div:first-child {
+                .splide {
+                    box-shadow: 1rem 3rem $purple !important;
+                    // max-width: 35rem;
+                    margin: 0 1rem 3rem 0 !important;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                > img {
+                    width: calc(100% - 1rem) !important;
+                    box-shadow: 1rem 3rem $purple !important;
+                    margin: 0 1rem 3rem 0 !important;
+                }
             }
 
             div:last-child {

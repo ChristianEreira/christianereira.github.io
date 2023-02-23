@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christian Ereira - Web Developer</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e916bca64c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -238,8 +241,16 @@
                 <div class="project">
                     <div>
                         <div>
-                            
-                            <img src="images/chat.png" alt="Screenshot of A* Pathfinder project">
+                            <section class="splide" aria-label="Splide Basic HTML Example">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide"><img src="images/chat.png" alt="Screenshot of A* Pathfinder project"></li>
+                                        <li class="splide__slide"><img src="images/chat.png" alt="Screenshot of A* Pathfinder project"></li>
+                                        <li class="splide__slide"><img src="images/chat.png" alt="Screenshot of A* Pathfinder project"></li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!-- <img src="images/chat.png" alt="Screenshot of A* Pathfinder project"> -->
                         </div>
                         <div>
                             <h3>Word Weaver</h3>

@@ -79,6 +79,15 @@ introtl.to("#scrollText", {
 
 
 window.onload = function () {
+    let splideElems = document.getElementsByClassName('splide');
+    console.log(splideElems);
+
+    for (let i = 0; i < splideElems.length; i++) {
+        new Splide(splideElems[i], {
+            type: 'loop',
+        }).mount();
+    }
+
     // Initialise skill cloud variables
     const phi = Math.PI * (3 - Math.sqrt(5));
     let rotation = { x: 0, y: 0, z: 0, xForce: 0, yForce: 0, zForce: 0 };
@@ -337,12 +346,12 @@ window.onload = function () {
     });
 
     document.querySelectorAll(".project").forEach(project => {
-    gsap.from(project.children, {
-        x: "-50%", opacity: 0, scrollTrigger: {
-            trigger: project,
-            start: "top center"
-        }, stagger: 0.1
-    });
+        gsap.from(project.children, {
+            x: "-50%", opacity: 0, scrollTrigger: {
+                trigger: project,
+                start: "top center"
+            }, stagger: 0.1
+        });
     });
 
     // Submit contact form
