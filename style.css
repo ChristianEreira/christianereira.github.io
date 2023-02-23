@@ -443,6 +443,24 @@ nav #menuButton {
   margin-bottom: 12rem;
 }
 
+.splide__arrow {
+  background: #7000e9;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.splide__arrow svg {
+  fill: #ebebd3;
+}
+
+.splide__pagination__page {
+  background: #0c0019;
+}
+
+.splide__pagination__page.is-active {
+  background: #7000e9;
+}
+
 #contact {
   background: #7000e9;
 }

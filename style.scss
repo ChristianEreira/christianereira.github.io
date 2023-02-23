@@ -393,6 +393,23 @@ nav {
     }
 }
 
+.splide__arrow {
+    background: $purple;
+    transition: all 200ms;
+
+    svg {
+        fill: $white;
+    }
+}
+
+.splide__pagination__page {
+    background: $bg;
+
+    &.is-active {
+        background: $purple;
+    }
+}
+
 #contact {
     background: $purple;
 
