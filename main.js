@@ -90,11 +90,11 @@ window.onload = function () {
 
     let wwPopup = document.querySelector('#wordWeaverPopup');
     document.querySelector('#wwButton').addEventListener('click', () => {
-        wwPopup.classList.remove('hidden');
+        gsap.fromTo('#wordWeaverPopup .popupFront', { scale: 0.9, opacity: 0 }, {scale: 1, opacity: 1, duration: 0.2, onStart: () => wwPopup.classList.remove('hidden')});
     });
 
     wwPopup.querySelector('.popupClose').addEventListener('click', () => {
-        wwPopup.classList.add('hidden');
+        gsap.to('#wordWeaverPopup .popupFront', { scale: 0.9, opacity: 0, duration: 0.2, onComplete: () => wwPopup.classList.add('hidden') });
     });
 
     // Initialise skill cloud variables
