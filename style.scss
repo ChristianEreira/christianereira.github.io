@@ -373,6 +373,7 @@ nav {
         .projectButton {
             text-decoration: none;
             color: $purple;
+            cursor: pointer;
 
             div {
                 background: $white;
@@ -524,6 +525,69 @@ footer {
         a {
             color: $purple3;
         }
+    }
+}
+
+.popupBack {
+    display: flex;
+    background: rgba($color: $bg, $alpha: 0.75);
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+
+    .popupFront {
+        position: relative;
+        background: $white;
+        color: $bg;
+        padding: 2rem;
+        width: clamp(6rem, calc(100% - 8rem), 40rem);
+        border-radius: 0.5rem;
+
+        .popupClose {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+        }
+
+        h3 {
+            margin: 0 0 1rem 0;
+            font-size: 1.75rem;
+        }
+
+        .popupButton {
+            text-decoration: none;
+            color: $purple;
+            cursor: pointer;
+            width: fit-content;
+            display: block;
+
+            div {
+                background: $purple;
+                color: $white;
+                margin-top: 2rem;
+                width: fit-content;
+                border-radius: 0.5rem;
+                padding: 0.5rem 2rem;
+                transition: all 200ms;
+
+                &:hover {
+                    background: $bg;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.hidden {
+        display: none;
     }
 }
 

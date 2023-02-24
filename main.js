@@ -88,6 +88,15 @@ window.onload = function () {
         }).mount();
     }
 
+    let wwPopup = document.querySelector('#wordWeaverPopup');
+    document.querySelector('#wwButton').addEventListener('click', () => {
+        wwPopup.classList.remove('hidden');
+    });
+
+    wwPopup.querySelector('.popupClose').addEventListener('click', () => {
+        wwPopup.classList.add('hidden');
+    });
+
     // Initialise skill cloud variables
     const phi = Math.PI * (3 - Math.sqrt(5));
     let rotation = { x: 0, y: 0, z: 0, xForce: 0, yForce: 0, zForce: 0 };

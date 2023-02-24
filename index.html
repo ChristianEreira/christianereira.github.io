@@ -283,7 +283,7 @@
                             <div class="capsule">APIs</div>
                         </div>
                         <div class="projectList">
-                            <a href="https://wordweaver.chrise.dev" class="projectButton" target="_blank">
+                            <a id="wwButton" class="projectButton">
                                 <div>
                                     Live
                                 </div>
@@ -332,6 +332,29 @@
         <p>Made by Christian Ereira - View the source code and more projects on <a target="_blank"
                 href="https://github.com/ChristianEreira">GitHub</a></p>
     </footer>
+
+    <div id="wordWeaverPopup" class="popupBack hidden">
+        <div class="popupFront">
+            <h3>Notice:</h3>
+            <p>Word Weaver requires an free account to play.<br>
+                If you'd rather not create your own account, you can use either of the two demo accounts
+                below:<br>
+                <br>
+                <b>Email:</b> demo1@chrise.dev or demo2@chrise.dev<br>
+                <b>Password:</b> DemoUser<br>
+                <br>
+                If you wish to start a game against yourself, you can use incognito windows to log in to two accounts at
+                the same time.
+            </p>
+            <a href="https://wordweaver.chrise.dev" target="_blank" class="popupButton">
+                <div>
+                    <p>Continue to live site</p>
+                </div>
+            </a>
+
+            <div class="popupClose"><i class="fa-solid fa-times"></i></div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
